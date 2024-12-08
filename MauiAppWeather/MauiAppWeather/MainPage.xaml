@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MauiAppWeather.MainPage"
+    Title="Погода">
+
+    <VerticalStackLayout Padding="20" Spacing="15">
+
+        <!-- Поле для ввода названия города -->
+        <Entry x:Name="CityEntry" Placeholder="Введите город" HorizontalOptions="Center" WidthRequest="200" />
+
+        <!-- Кнопка для запроса погоды -->
+        <Button Text="Показать погоду" HorizontalOptions="Center" Clicked="OnShowWeatherClicked" />
+
+        <!-- Раздел для избранных городов -->
+        <Label Text="Избранные города:" FontAttributes="Bold" HorizontalOptions="Center" />
+
+        <HorizontalStackLayout Spacing="10">
+            <Entry x:Name="FavCityEntry" Placeholder="Город в избранное" HorizontalOptions="FillAndExpand" />
+            <Button Text="Добавить" Clicked="OnAddCityClicked" />
+        </HorizontalStackLayout>
+
+        <CollectionView x:Name="FavoriteCitiesView" SelectionMode="Single" SelectionChanged="OnFavoriteCitySelected" HorizontalOptions="FillAndExpand">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <HorizontalStackLayout Spacing="10">
+                        <Label Text="{Binding CityName}" VerticalOptions="Center" />
+                        <Button Text="Удалить" Clicked="OnDeleteCityClicked"/>
+                    </HorizontalStackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+    </VerticalStackLayout>
+</ContentPage>
+
+
