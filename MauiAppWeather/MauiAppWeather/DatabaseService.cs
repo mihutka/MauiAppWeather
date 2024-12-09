@@ -15,7 +15,7 @@ namespace MauiAppWeather
         {
             var dbPath = Path.Combine(FileSystem.AppDataDirectory, "weatherdata.db3");
             _db = new SQLiteConnection(dbPath);
-            _db.CreateTable<FavoriteCity>(); // Создадим таблицу для избранных городов
+            _db.CreateTable<FavoriteCity>(); 
         }
 
         public IEnumerable<FavoriteCity> GetFavoriteCities()

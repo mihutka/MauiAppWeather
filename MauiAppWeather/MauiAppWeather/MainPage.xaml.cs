@@ -45,7 +45,7 @@ namespace MauiAppWeather
                 return;
             }
 
-            // Получаем WeatherPage из DI
+           
             var weatherPage = _serviceProvider.GetService<WeatherPage>();
             if (weatherPage == null)
             {
@@ -86,7 +86,7 @@ namespace MauiAppWeather
             if (selectedCity == null)
                 return;
 
-            // Очищаем выбор
+            
             FavoriteCitiesView.SelectedItem = null;
 
             var weather = await _weatherService.GetCurrentWeatherAsync(selectedCity.CityName);

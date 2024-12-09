@@ -21,7 +21,7 @@ namespace MauiAppWeather
             builder.Services.AddSingleton<DatabaseService>();
             builder.Services.AddSingleton<WeatherService>();
 
-            // Регистрация MainPage для DI
+            
             builder.Services.AddSingleton<MainPage>();
             builder.Services.AddTransient<WeatherPage>();
 

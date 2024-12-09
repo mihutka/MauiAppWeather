@@ -7,13 +7,13 @@
 
     <VerticalStackLayout Padding="20" Spacing="15">
 
-        <!-- Поле для ввода названия города -->
+        
         <Entry x:Name="CityEntry" Placeholder="Введите город" HorizontalOptions="Center" WidthRequest="200" />
 
-        <!-- Кнопка для запроса погоды -->
+        
         <Button Text="Показать погоду" HorizontalOptions="Center" Clicked="OnShowWeatherClicked" />
 
-        <!-- Раздел для избранных городов -->
+        
         <Label Text="Избранные города:" FontAttributes="Bold" HorizontalOptions="Center" />
 
         <HorizontalStackLayout Spacing="10">
